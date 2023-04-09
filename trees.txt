@@ -122,12 +122,14 @@ Right sub tree of 14 i.e, 19 less than 14
 Left sub tree of 35 i.e, 31 less than 35
 Right sub tree of 35 i.e, less than 42
 -------------------
-Balanced Binary Tree:
-The absolute difference of heights of left and right subtrees at any node is less than or equal to 1 
+Balanced Binary Tree (or) Height balanced tree:
+The absolute difference of heights of left and right subtrees at any node is either 0 or 1.
+i.e, |height of left subtree - height of right subtree| = 0 or 1 
+If any node has no children, take heights of left and right childs as -1
 For each node, its left subtree is a balanced binary tree
 For each node, its right subtree is a balanced binary tree
 Full Balanced Binary Tree: 
-If difference b/w left and right subtrees of all nodes should be 0, then it is a balanced binary tree 
+If difference b/w left and right subtrees of all nodes is 0, then it is a full balanced binary tree 
 For full balanced binary tree, balance factor = 0
                        1
                       / \
@@ -135,18 +137,24 @@ For full balanced binary tree, balance factor = 0
                     2     3
                    / \   
                   4   5
-For node 1: height of left subtree = 2 
-For node 1: height of right subtree = 1
-Diff = 2-1 = 1, So node 1 is balanced
-For node 2: height of left subtree = 1
-For node 2: height of right subtree = 1
-Diff = 1-1 = 0, So node 2 is balanced 
-For nodes 3,4,5 There are left and right subtrees, So they are balanced too
+For node 1, it has 2 childs i.e, 2 and 3,
+height of left child 2 = 1 
+height of right child 3 = 0 
+So For node 1, balance factor = |1-0| = 1
+For node 2, There are 2 childs 4 and 5
+height of 4 = 0
+height of 5 = 0
+So For node 2, balance factor = |0-0| = 0
+For node 4, There are no left and right subtrees, so take heights as -1 for Both
+balance factor for node 4 = |-1-(-1)| = 0
+Similarly for node 5, balance factor = 0
+For node 3, There are no left and right subtrees, so take heights as -1
+balance factor of node 3 = |-1-(-1)| = 0 
 Overall Tree is balanced finally
 If difference b/w left and right subtrees of all nodes in a binary tree is 1, then it has a balance factor = 1
 If in a tree, There are more than 2 balance factors i.e, 0 and 1, then it is just a balanced binary tree.
 ---------------------
-Balanced Binary Search Tree:
+Balanced Binary Search Tree (or) Height balanced binary search tree:
 All nodes of left subtree are less than the root node
 All nodes of right subtree are more than the root node
 Both subtrees of each node are also BSTs
@@ -159,9 +167,37 @@ The absolute difference of heights of left and right subtrees at any node is les
                                \
                                 39
 ---------------------
-Self Balancing Binary Search Trees:
----------------------
-Height Balancing Trees:
+Self balancing binary search trees: 1) AVL tree and 2) Red-Black tree 
+-------
+AVL Tree:
+As we know for binary search tree, inseertion, deletion and searching all takes O(n) as worst case time complexity if bst is a left skewed  (or) right skewed 
+So, We need balanced bst to make insertion, deletion and searching to take O(logn) TC which is the best case
+So, AVL tree provides rotations on bst to make unbalanced bst to balanced bst at the any time of insertion and deletion so that the whole bst would be balanced
+so that the insertion, deletion and searching takes O(logn) TC always at any point of time. 
+Where n = height of bst 
+--------------------
+Heaps: -> 2 types -> Max Heap and Min Heap 
+Heap is a complete binary tree
+Max Heap: Any node in the binary tree is greater than their child nodes, Root node is greater than all of 
+it's child nodes. 
+Min Heap: Any node in the binary tree is lesser than their child nodes, Root node is lesser than all of 
+it's child nodes.
+                         9
+                        / \
+                       5   4
+                      / \ /
+                     1  3 2  
+
+                     MAX HEAP 
+                        
+                        1
+                       / \
+                      2   3
+                     / \ /
+                    4  5 9 
+
+                    MIN HEAP 
 ----------------------
-                               
+
+
 
