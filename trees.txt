@@ -30,6 +30,12 @@ Depth: The maximum number of edges in a path from root node to that particular n
 Height: The maximum number of edges in a path from that particular node to the leaf node
 Path: The sequence of nodes and edges from one node to another is called a path
 Subtree: Each child from a node forms a subtree recursively. Every child node will form a subtree on its parent node
+Width of tree: The width of one level is defined as the length between 2 end nodes( the left most and the right most non null nodes 
+in the level, where the null nodes between the end nodes are also counted in the length calculation)
+Maximum width of tree: Maximum width in all possible widths of a tree
+Diameter of binary tree: The diameter of a tree is the length of the longest path between any 2 nodes of a tree.
+The length of a path is counted as the number of edges lying on that path.
+Maximum diameter of binary tree: The length of longest path between any 2 leaf nodes which has maximum diameter of all possible diameters 
 ------------------
 Full Binary Tree / Strict Binary Tree / Proper Binary Tree / 2-Tree:
 Every parent node can have either 0 child or 2 childs 
